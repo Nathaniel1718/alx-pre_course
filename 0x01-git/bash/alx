@@ -1,2 +1,48 @@
-#!/bin/bash
-echo "ALX School"
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int i,j;
+    int arraya[2][3]={};
+    
+    printf("welcome! please enter your 2x3 matrix sequentially, starting from the first row:\n");
+    for(i=0;i<2;i++){
+        for (j=0;j<3;j++){
+            scanf("%d",&arraya[i][j]);
+        }
+    }
+    printf("weldone, your 2x3 matrix is:\n");
+      for(i=0;i<2;i++){
+        for (j=0;j<3;j++){
+            printf("%02d ",arraya[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
+    
+    printf("weldone, the transpose of your 2x3 matrix is:\n");
+    array_transpose(arraya);
+       
+    printf("\nThank you for trying out this code, am open to scholarships and internships, please i would love to learn more.");
+ return 0;
+}
+
+void array_transpose(int array[2][3]){
+    int i,j;
+    
+    int arrayt[3][2]={};
+    arrayt[0][0] =array[0][0];
+     arrayt[1][0]=array[0][1];
+      arrayt[2][0]=array[0][2];
+       arrayt[0][1]=array[1][0];
+        arrayt[1][1]=array[1][1];
+    arrayt[2][1]=array[1][2];
+       for(i=0;i<3;i++){
+        for (j=0;j<2;j++){
+            printf("%02d ",arrayt[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
